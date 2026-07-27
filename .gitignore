@@ -6,5 +6,4 @@
 !.claudeignore
 !README.md
 !skills/
-!skills/smythos-kb-doc/
-!skills/smythos-kb-doc/**
+!skills/**
