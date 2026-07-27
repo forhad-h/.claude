@@ -1,0 +1,284 @@
+<!--
+  BookStack Page Template for SmythOS Knowledge Base
+  ===================================================
+  This file is a FORMAT REFERENCE — real content has been replaced with
+  dummy/placeholder text so you can see every HTML pattern BookStack uses.
+
+  Rules:
+  - Every block element needs a unique id="bkmrk-..." attribute
+  - External links: target="_blank" rel="noopener noreferrer"
+  - Code blocks: <pre><code class="language-{lang}">
+  - Callouts: <p class="callout info"> or <p class="callout warning">
+  - Page Title is plain text (not in this HTML — passed separately)
+-->
+
+<!-- ====== SUMMARY CALLOUT ====== -->
+<p id="bkmrk-this-article-covers" class="callout info">This article covers [brief description of what the page documents]. It explains [topic A], [topic B], and [topic C], including code examples and architecture details.</p>
+
+<!-- ====== MAJOR SECTION (h2) ====== -->
+<h2 id="bkmrk-section-one-heading">Section One Heading</h2>
+<p id="bkmrk-introductory-paragra">Introductory paragraph explaining the concept. Key terms are <strong>bolded on first use</strong>. Inline code references like <code>functionName()</code> or <code>ClassName</code> use code tags.</p>
+
+<!-- ====== CODE BLOCK (single line / path) ====== -->
+<pre id="bkmrk-example-path"><code>~/example/path/to/directory/</code></pre>
+
+<!-- ====== PARAGRAPH WITH LINK ====== -->
+<p id="bkmrk-this-path-is-configu">This path is configured in <a href="https://github.com/SmythOS/smythos-studio/blob/main/packages/app/src/backend/config.ts" target="_blank" rel="noopener noreferrer"><code>config.ts</code></a> as <code>EXAMPLE_CONSTANT</code>.</p>
+
+<!-- ====== PARAGRAPH WITH EMPHASIS ====== -->
+<p id="bkmrk-the-system-uses-a-pa">The system uses a <strong>pattern-name</strong> approach:</p>
+
+<!-- ====== TABLE WITH HEADER ====== -->
+<table id="bkmrk-column-a-column-b">
+<thead>
+<tr>
+<th>Column A</th>
+<th>Column B</th>
+<th>Column C</th>
+<th>Column D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Row 1 Label</strong></td>
+<td><code>InlineCode</code></td>
+<td><code>~/path/to/dir/</code></td>
+<td>Description text here</td>
+</tr>
+<tr>
+<td><strong>Row 2 Label</strong></td>
+<td><code>AnotherCode</code></td>
+<td><code>~/other/path/</code></td>
+<td>Another description</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ====== SUBSECTION (h3) ====== -->
+<h3 id="bkmrk-subsection-heading">Subsection Heading</h3>
+
+<!-- ====== DIRECTORY TREE ====== -->
+<pre id="bkmrk-directory-tree"><code>~/example/
+├── dir-a/
+│   ├── file-one.json
+│   ├── file-two.json
+│   └── ...
+└── dir-b/
+    └── nested/
+        ├── item-1.json
+        └── ...</code></pre>
+
+<!-- ====== WARNING CALLOUT ====== -->
+<p id="bkmrk-warning-callout-exam" class="callout warning"><strong>Important note:</strong> Description of a caveat, known issue, or something the reader should be careful about. Can include <a href="#bkmrk-section-one-heading">internal links</a> to other sections.</p>
+
+<!-- ====== HORIZONTAL RULE (section separator) ====== -->
+<hr id="bkmrk-hr-1">
+
+<!-- ====== ANOTHER MAJOR SECTION ====== -->
+<h2 id="bkmrk-section-two-heading">Section Two Heading</h2>
+<p id="bkmrk-description-with-lin">Description with a link to source code: The <code>ClassName</code> class (<a href="https://github.com/SmythOS/smythos-studio/blob/main/packages/app/src/backend/services/Example.class.ts" target="_blank" rel="noopener noreferrer"><code>Example.class.ts</code></a>) does XYZ.</p>
+
+<!-- ====== TWO-COLUMN TABLE ====== -->
+<table id="bkmrk-property-value-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Directory</td>
+<td><code>~/example/path/</code></td>
+</tr>
+<tr>
+<td>TTL</td>
+<td>None (indefinite)</td>
+</tr>
+<tr>
+<td>Key format</td>
+<td><code>{name}.json</code></td>
+</tr>
+</tbody>
+</table>
+
+<!-- ====== CODE BLOCK WITH LANGUAGE ====== -->
+<pre id="bkmrk-code-example-ts"><code class="language-typescript">// Example TypeScript code block
+const result = await service.getData(key);
+const item = result?.data?.[itemName];
+
+// Writing data
+service.update(key, itemName, {
+  id: "example-id",
+  name: "Example Name",
+  description: "A placeholder description",
+  enabled: true
+});</code></pre>
+
+<!-- ====== ORDERED LIST ====== -->
+<p id="bkmrk-data-is-fetched-via">Data is fetched via two approaches, tried in order:</p>
+<ol id="bkmrk-first-approach">
+<li><strong>First approach</strong> (<code>_methodOne</code>) &mdash; description of the first method</li>
+<li><strong>Second approach</strong> (<code>_methodTwo</code>) &mdash; description of the fallback method</li>
+</ol>
+
+<!-- ====== UNORDERED LIST ====== -->
+<ul id="bkmrk-bullet-list-example">
+<li><strong>Point one</strong> &mdash; explanation of the first bullet point</li>
+<li><strong>Point two</strong> &mdash; explanation of the second bullet point</li>
+<li><strong>Point three</strong> &mdash; explanation of the third bullet point</li>
+</ul>
+
+<hr id="bkmrk-hr-2">
+
+<!-- ====== ASCII DIAGRAM ====== -->
+<h2 id="bkmrk-data-flow-heading">Data Flow</h2>
+<pre id="bkmrk-ascii-diagram"><code>
+Request arrives
+      |
+      v
+Check cache for key
+      |
+ ┌────┴────┐
+ |         |
+[HIT]    [MISS]
+ |         |
+ |         v
+ |    Fetch from source
+ |         |
+ └────┬────┘
+      |
+      v
+Return response
+</code></pre>
+
+<hr id="bkmrk-hr-3">
+
+<!-- ====== CACHE / STRATEGY TABLE ====== -->
+<h2 id="bkmrk-strategy-heading">Strategy Overview</h2>
+<table id="bkmrk-strategy-table">
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Strategy</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type-a</code></td>
+<td>Manual overwrite</td>
+<td>Updated on each fetch. No automatic expiration.</td>
+</tr>
+<tr>
+<td><code>type-b</code></td>
+<td>TTL-based</td>
+<td>Expires after N days. Stale entries served while refreshing in background.</td>
+</tr>
+<tr>
+<td><code>type-c</code></td>
+<td>Explicit deletion</td>
+<td>Consumed on use, then removed.</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ====== STALE-WHILE-REVALIDATE PATTERN EXAMPLE ====== -->
+<h3 id="bkmrk-pattern-example">Pattern Example</h3>
+<pre id="bkmrk-pattern-code"><code class="language-typescript">// Example of a common pattern
+let cached = await cache.get(key);
+let items = cached?.data?.items || [];
+
+if (items.length > 0) {
+    if (cached?.expired) {
+        refreshInBackground(params);  // No await — async
+    }
+    return { success: true, data: { items } };
+}
+
+// Cache empty — block on fresh fetch
+const res = await fetchFresh(params);</code></pre>
+
+<p id="bkmrk-pattern-info" class="callout info"><strong>Key behavior:</strong> Description of the important behavior or takeaway from the pattern above.</p>
+
+<hr id="bkmrk-hr-4">
+
+<!-- ====== SOURCE FILES TABLE ====== -->
+<h2 id="bkmrk-source-files-heading">Source Files</h2>
+<table id="bkmrk-source-files-table">
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/SmythOS/smythos-studio/blob/main/packages/app/src/backend/services/Example.service.ts" target="_blank" rel="noopener noreferrer"><code>Example.service.ts</code></a></td>
+<td>Main service: orchestration, caching, pagination</td>
+</tr>
+<tr>
+<td><a href="https://github.com/SmythOS/smythos-studio/blob/main/packages/app/src/backend/services/Cache.class.ts" target="_blank" rel="noopener noreferrer"><code>Cache.class.ts</code></a></td>
+<td>Generic cache with TTL support</td>
+</tr>
+<tr>
+<td><a href="https://github.com/SmythOS/sre/blob/main/packages/core/src/Components/Example.class.ts" target="_blank" rel="noopener noreferrer"><code>Example.class.ts</code></a></td>
+<td>SRE runtime component</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ====== RELATED CALLOUT ====== -->
+<p id="bkmrk-related-callout" class="callout info"><strong>Related:</strong> For more on [related topic], see <a href="http://kb.smyth.local/related-page.html">Related Page Title</a>.</p>
+
+<hr id="bkmrk-hr-5">
+
+<!-- ====== FUTURE / IMPROVEMENT SECTION ====== -->
+<h2 id="bkmrk-future-improvements">Future Improvements</h2>
+<p id="bkmrk-current-pain-points">Current pain points:</p>
+<ul id="bkmrk-pain-points-list">
+<li><strong>Issue one</strong> &mdash; description of the problem</li>
+<li><strong>Issue two</strong> &mdash; description of another problem</li>
+</ul>
+
+<h3 id="bkmrk-proposed-changes">Proposed Changes</h3>
+<pre id="bkmrk-proposed-structure"><code>~/example/
+└── new-structure/
+    ├── persistent-data/
+    │   └── items.json
+    └── .cache/
+        └── temp-data/
+            └── pages.json</code></pre>
+
+<!-- ====== BEFORE/AFTER TABLE ====== -->
+<table id="bkmrk-before-after-table">
+<thead>
+<tr>
+<th>Improvement</th>
+<th>Before</th>
+<th>After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organization</td>
+<td>Data scattered across directories</td>
+<td>All data under single root</td>
+</tr>
+<tr>
+<td>Naming</td>
+<td>Inconsistent conventions</td>
+<td>Consistent kebab-case</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ====== MIGRATION NOTES (unordered list) ====== -->
+<h3 id="bkmrk-migration-notes">Migration Notes</h3>
+<ul id="bkmrk-migration-list">
+<li>Step one of migration</li>
+<li>Step two of migration</li>
+<li>What can safely be deleted vs what must be preserved</li>
+</ul>
+
+<p id="bkmrk-scope-callout" class="callout info"><strong>Scope:</strong> This change only affects [specific area]. Other features remain unchanged.</p>

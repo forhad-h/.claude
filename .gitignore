@@ -1,0 +1,10 @@
+# Ignore everything by default — ~/.claude contains sensitive personal data
+*
+
+# Whitelist: shared skills
+!.gitignore
+!.claudeignore
+!README.md
+!skills/
+!skills/smythos-kb-doc/
+!skills/smythos-kb-doc/**
